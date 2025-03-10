@@ -14,10 +14,10 @@ jobs:
       # Install bun
       - uses: oven-sh/setup-bun@v2
         with:
-          bun-version: 1.2.4
+          bun-version: latest
       # Deploy to Cloudflare Workers
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          config: wrangler.jsonc
+          wranglerVersion: latest
